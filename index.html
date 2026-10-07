@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Cone, Two Stories</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <p class="eyebrow">LAB 3 · PHOTO CAROUSEL</p>
+      <h1>One Ice Cream, <span>Two Stories</span></h1>
+      <p class="intro">
+        The same three images can tell very different stories depending on their order.
+        Choose a sequence and move through the carousel.
+      </p>
+    </header>
+
+    <main>
+      <section class="story-picker" aria-label="Choose story sequence">
+        <button class="story-btn active" data-story="storyA">
+          <span class="story-number">01</span>
+          <span>
+            <strong>Second Chance</strong>
+            <small>Show → Drop → New cone</small>
+          </span>
+        </button>
+
+        <button class="story-btn" data-story="storyB">
+          <span class="story-number">02</span>
+          <span>
+            <strong>Too Good to Last</strong>
+            <small>Show → Eat → Drop</small>
+          </span>
+        </button>
+      </section>
+
+      <section class="carousel-card">
+        <div class="tape tape-left"></div>
+        <div class="tape tape-right"></div>
+
+        <div class="image-wrap" id="imageWrap" tabindex="0" aria-label="Click image to show next scene">
+          <img id="storyImage" src="images/show.png" alt="A boy proudly showing a tall rainbow ice cream cone." />
+          <div class="scene-tag" id="sceneTag">BEGINNING</div>
+        </div>
+
+        <div class="story-copy">
+          <div class="counter">
+            <span id="currentNumber">01</span>
+            <span class="counter-line"></span>
+            <span>03</span>
+          </div>
+
+          <div>
+            <p class="story-name" id="storyName">SECOND CHANCE</p>
+            <h2 id="captionTitle">The perfect cone.</h2>
+            <p id="captionText">
+              He proudly shows off the tallest, brightest ice cream cone he could find.
+            </p>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="prevBtn" class="nav-btn" aria-label="Previous image">←</button>
+
+          <div class="dots" id="dots" aria-label="Carousel progress">
+            <button class="dot active" data-index="0" aria-label="Scene 1"></button>
+            <button class="dot" data-index="1" aria-label="Scene 2"></button>
+            <button class="dot" data-index="2" aria-label="Scene 3"></button>
+          </div>
+
+          <button id="nextBtn" class="nav-btn" aria-label="Next image">→</button>
+        </div>
+
+        <p class="hint">Click the photo or use the arrows to continue.</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
